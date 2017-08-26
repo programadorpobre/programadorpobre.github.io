@@ -40,7 +40,7 @@ feeds = read_feeds(urls)
 entries = merge_last_entries(feeds)
 tmpl = codecs.open('feed-entry-tmpl.html', 'r', 'utf-8').read()
 
-with open(output_html, 'w') as out_html:
+with codecs.open(output_html, 'w', 'utf-8') as out_html:
     for feed, entry in entries:
         print('Processing {}'.format(feed.link))
         out_html.write(format_entry(tmpl, feed, entry))
