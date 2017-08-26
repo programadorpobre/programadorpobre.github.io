@@ -1,0 +1,39 @@
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
+title:          Programador Pobre
+paginate:       7
+baseurl:        ""
+url:            "https://programadorpobre.github.io"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+
+# About
+author:
+  name:         Programador Pobre
+  url:          https://programadorpobre.github.io
+  email:        programadorpobre@protonmail.com
+
+# Custom vars
+version:        3.4.1
+github:
+  repo:         https://github.com/programadorpobre/programadorpobre.github.io
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Disqus
+disqus:
+  shortname: programador-pobre
+
+# Clicy
+clicky:
+  id: 101068747
