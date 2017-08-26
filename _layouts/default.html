@@ -15,17 +15,18 @@
     </div>
   </nav>
 
+  <div class="wrapper">
     <main>
       {{ content }}
-
-      {% include foot.html %}
     </main>
+    {% include side.html %}
+    {% include foot.html %}
+  </div>
 
     <footer>
       <span>
         &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
-
   </body>
 </html>
