@@ -3,6 +3,7 @@
 
 import re
 import sys
+import codecs
 from datetime import datetime
 import feedparser
 
@@ -37,7 +38,7 @@ output_html = sys.argv[2]
 urls = read_feed_list(input_url_list)
 feeds = read_feeds(urls)
 entries = merge_last_entries(feeds)
-tmpl = open('feed-entry-tmpl.html', 'r').read()
+tmpl = codecs.open('feed-entry-tmpl.html', 'r', 'utf-8').read()
 
 with open(output_html, 'w') as out_html:
     for feed, entry in entries:
