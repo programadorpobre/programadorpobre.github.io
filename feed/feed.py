@@ -19,7 +19,8 @@ def read_feeds(urls):
 def merge_last_entries(feeds):
     entries = []
     for feed in feeds:
-        entries.append((feed.feed, feed['items'][0]))
+        if feed['items']:
+            entries.append((feed.feed, feed['items'][0]))
     return sorted(entries, key=lambda entry: entry[1]["published"], reverse=True)
 
 
