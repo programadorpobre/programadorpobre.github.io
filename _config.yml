@@ -37,3 +37,6 @@ disqus:
 # Clicy
 clicky:
   id: 101068747
+
+plugins:
+  - jekyll-feed
