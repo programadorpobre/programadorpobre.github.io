@@ -8,9 +8,9 @@ git config --global user.name "Travis CI"
 git checkout master
 
 git add _includes/feed-entries.html
-git commit --message "[travis] #$TRAVIS_BUILD_NUMBER"
+git commit --message "[ci skip] travis #$TRAVIS_BUILD_NUMBER"
 
-git remote add github-origin https://${GITHUB_TOKEN}@github.com/programadorpobre/programadorpobre.github.io
-git push -u github-origin master
+git remote add github-origin https://${GITHUB_TOKEN}@github.com/programadorpobre/programadorpobre.github.io > /dev/null 2>&1
+git push -u github-origin master > /dev/null 2>&1
 
 echo "./scripts/travis_push.sh finished"
